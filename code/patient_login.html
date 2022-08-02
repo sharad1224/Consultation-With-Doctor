@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Care & Cure Clinic</title>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/login_style.css">
+
+
+<script type="text/javascript" src="js/patient_login_script.js"></script>  
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+	<a class="navbar-brand" href="index.html" target="_blank"><img src="images/logo.png" alt=""></a>	
+  <section>
+    <div class="container">
+      <div class="user signinBx">
+	  
+        <div class="imgBx"><img src="images/login1.jpg" alt="" /></div>
+        <div class="formBx">
+          <form action="patient_dashboard.html" onsubmit="return true;">
+            <h2>Sign In</h2>
+            <input type="email" name="" placeholder="Email Address" required />
+            <input type="password" name="" placeholder="Password" required />
+            <input type="submit" name="" value="Login" />
+			<a href="index.html"><input type="button" name="" value="Back" /></a>
+            <p class="signup">
+              Don't have an account ?
+              <a href="#" onclick="toggleForm();">Sign Up.</a>
+            </p>
+          </form>
+        </div>
+      </div>
+      <div class="user signupBx">
+        <div class="formBx">
+          <form method="POST" action="patient_dashboard.html" onsubmit="return ValidateForm(this);">
+            <h2>Create an account</h2>
+			<input type="text" name="patient_name"  placeholder="Full Name" pattern="[A-Za-z\s]{2,}" title="Name should be atleast of 2 letters with no special or number characters except balnk spance"/>            
+            <input type="email" name="patient_email"  placeholder="Email Address"  />
+            <input type="password" placeholder="Create Password" name="patient_password" id="patient_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" onkeyup='check();'/>
+            <input type="password" placeholder="Confirm Password"  name="patient_confirmpassword" id="patient_confirmpassword" onkeyup='check();'/>
+			<span id='message'></span><br>
+            <input type="submit" value="Sign Up" />
+			<a href="index.html"><input type="button" name="" value="Back" /></a>
+            <p class="signup">
+              Already have an account ?
+              <a href="#" onclick="toggleForm();">Sign in.</a>
+            </p>
+          </form>
+        </div>
+        <div class="imgBx"><img src="images/login2.jpg" alt="" /></div>
+      </div>
+    </div>
+  </section>
+</body>
+<!-- partial -->
+  <script  src="./login_script.js"></script>
+
+</body>
+</html>
